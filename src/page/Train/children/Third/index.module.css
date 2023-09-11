@@ -1,0 +1,74 @@
+.all{
+    /* text-align: center; */
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    /* height: 60vh; */
+}
+.longall{
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    height: 61vh;
+}
+.detail{
+    font-size: 13px;
+    color: rgb(196, 196, 205);
+  padding-bottom: 10px;
+  padding-left: 300px;
+}
+.tit{
+height: 30px;
+line-height: 30px;
+margin-top:20px;
+font-size: 16px;
+/* font-family: ; */
+}
+.contain{
+    display: flex;
+    width: 600px;
+}
+.seleasist{
+    display: flex;
+    height: 50px;
+    line-height: 140px;
+}
+
+.contit{
+    position: relative;
+    width: 15%;
+    font-size: 15px;
+    top:10%;
+    font-family: \"Microsoft YaHei\", \"微软雅黑\", STXihei, \"华文细黑\", Arial, Helvetica, sans-serif;
+    float: left;
+
+}
+.mainul{
+    position: relative;
+    top: 5vh;
+}
+.conmain{
+margin-top:4.5%;
+width: 30%;
+position: relative;
+}
+.create{
+    margin-top:-4%;
+}
+.showx{
+    margin-left: 50px;
+}
+.detail{
+    margin-left: -20%;
+    position: relative;
+}
+.maintr td{
+width: 10%;
+height: 23px;
+line-height: 23px;
+}
+.containtr td{
+    width: 1%;
+    height: 23px;
+    line-height: 23px;
+    }

@@ -1,0 +1,35 @@
+#mu{
+    background-color: black;
+    height: 90%;
+color-scheme: abs($number: 0);
+}
+.font{
+    color:rgb(255, 255, 255);
+    
+}
+
+.all{
+    display: flex;
+}
+.pic{
+    width: 150px;
+    margin-top:-10px;
+    margin-left:-39px;
+    margin-right:15px
+
+}
+.pic:hover{
+    border-bottom:black ;
+}
+.person{
+    position: absolute;
+    color:white;
+    top: -2px;
+    margin-left: 35%;
+    cursor: pointer;
+}
+.picimg{
+    width: 50px;
+    border-radius: 100%;
+    margin-top: -10%;
+}

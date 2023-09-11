@@ -1,0 +1,91 @@
+.all{
+    background: url('../../assets/pic/ss.png');
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.box{
+    position: absolute;
+    border-top: 1px solid white;
+    width: 30%;
+    height: 40%;
+    left: 5%;
+    top: 45%;
+    // text-align: center;
+    z-index: 100;
+}
+.title{
+    font: bold 15px/24px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 550;
+    color: white;
+    height: 20px;
+}
+.font{
+    color:white;
+margin-top:20px;
+text-align: left;
+font: bold 15px/24px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.in{
+    margin-top:10px;
+    border-radius: 5px;
+    height: 27px;
+    position: absolute;
+    width: 350px;
+    padding-left: 5px;
+    z-index: 1000000;
+  
+}
+.in:hover{
+    border: 3px solid rgb(92,180,199);
+    padding: 15px;
+}
+.in:checked{
+    border: 3px solid rgb(92,180,199);
+    padding: 15px;
+}
+.for{
+    font-size: 15px;
+    margin-left: 65%;
+    color: white;
+    position: absolute;
+    margin-top:-6%;
+    // color:rgb(226,125,178)
+    background-image:-webkit-linear-gradient(left,rgb(1,143,166), rgb(248,201,84),rgb(103,184,214));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+cursor: pointer;
+}
+.but{
+    margin-top:70px;
+    width: 350px;
+height: 40px;
+border-radius:10px;
+color:white;
+background-color: rgb(54, 172, 199);
+font: bold 15px/24px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.res{
+    margin-top:10px;
+    color:white;
+    text-align: center;
+    margin-left:-10%;
+    font: bold 15px/24px "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.resister{
+    color:rgb(92,180,199);
+ 
+    cursor: pointer;
+}

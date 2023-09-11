@@ -1,0 +1,125 @@
+.all{
+    background-color: white;
+    width: 98%;
+    margin-left:1%;
+    margin-top:10px;
+    padding-bottom: 20px;
+    /* height: 630px; */
+    /* overflow:hidden ; */
+    margin-bottom: 20px;
+}
+.top{
+    text-align: left;
+    margin-left:20px;
+    position: relative;
+    top:20px;
+    display: flex;
+    height: 20px;
+    line-height: 20px;
+}
+.radio{
+    margin-top:3px
+}
+.topcon{
+text-align: left;
+/* display: flex; */
+}
+.toptit{
+    margin-top:5%;
+    height: 10px;
+    line-height: 10px;
+      margin-left:20px;
+      color:rgb(139, 136, 136)
+}
+.ttit{
+     margin-top:-2%;
+    height: 10px;
+    line-height: 10px;
+      margin-left:20px;
+      color:rgb(139, 136, 136)
+}
+.train{
+    height: 150px;
+    margin-top:10px
+}
+.diver{
+    width: 80%;
+    height: 1px;
+    background-color: rgb(197, 186, 186);
+    z-index: 11000;
+    /* margin-top:-30px */
+    margin-left:10%;
+    margin-top: 4rem;
+}
+.bottom{
+text-align: left;
+}
+.create{
+    height: 40px;
+    line-height: 40px;
+    margin-left:10px;
+    margin-top:20px;
+}
+.tabdata{
+    line-height: 70px;
+    margin-left:30px;
+    font-family: "华文细黑", STXihei, sans-serif;
+    /* margin-bottom: -15%; */
+}
+.showimg{
+    position: relative;
+    margin-left:80%;
+    top: -20vw;
+}
+.newbox{
+    display: flex;
+}
+.picimg{
+   width: 200px; 
+   /* position: relative; */
+   color:#00ffff
+}
+.selecttype{
+    left: 80%;
+    position: absolute;
+}
+.echart{
+position: relative;
+left:30%;
+top:-220px; 
+width: 500px;
+}
+.echart1{
+position: relative;
+/* left:30%; */
+top:-220px; 
+width: 100%;
+display: flex;
+}
+.datatab{
+    height: 100px;
+    margin-top:-10px;
+    font-family: "华文细黑", STXihei, sans-serif;
+}
+.tabhei{
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+.winder{
+height: 50px;
+margin-top: -20px;
+margin-left: 20px;
+}
+.gram{
+    margin-top: 20px;
+    margin-left: -70%;
+    width: 300px;
+}
+.xydata{
+
+}
+.datano{
+    width: 300px;
+    margin-left: 30%;
+}

@@ -1,0 +1,113 @@
+.all{
+width: 100%;
+/* border: 1px solid; */
+height: auto;
+display: flex;
+}
+.nosel{
+    position: relative;
+    margin-top: -20px;
+}
+.left{
+    width: 70%;
+    display: grid;
+     grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+   grid-row-gap: 10px;
+  grid-column-gap: 10px;
+text-align: left;
+height: 75vh;
+}
+.left div{
+    background-color: white;
+    border-radius: 10px;
+    
+}
+.first{
+    box-shadow: 2px 2px 5px rgba(139, 139, 139, 0.22);
+}
+.right{
+width: 28%;
+}
+.xian{
+    grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  box-shadow: 2px 2px 5px rgba(139, 139, 139, 0.22);  
+}
+.xian1{
+    grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 6  ;
+  box-shadow: 2px 2px 5px rgba(139, 139, 139, 0.22);
+}
+.title{
+height: 20px;
+line-height: 20px;
+margin: 1rem;
+font-weight: 550;
+font-size: 17px;
+}
+.contain{
+    height: 20px;
+line-height: 20px;
+}
+.num{
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.used{
+    margin-left: 30%;
+    position: relative;
+    top: -5px;
+    color: rgb(175, 175, 178);
+}
+.usedd{
+    margin-left: 6%;
+    position: relative;
+    margin-top: 5%;
+    top: -5px;
+    color: rgb(175, 175, 178);
+}
+.cir{
+    position: relative;
+    width: 50px;
+    margin-left: 63%;
+     margin-top: -20%;
+}
+.right{
+background-color: white;
+margin-left: 2%;
+border-radius: 10px;
+box-shadow: 2px 2px 5px rgba(139, 139, 139, 0.22);
+text-align: left;
+
+}
+.diver{
+    height: 1px;
+    width: 80%;
+    background-color: rgba(175, 175, 178, 0.502);;
+    margin-left:10% ;
+    margin-top: -30px;
+}
+.rpart{
+height: 50px;
+line-height: 50px;
+display: flex;
+}
+.pic{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 4%;
+    margin-right: 10px;
+
+}
+.sname{
+    font-size: 16px;
+    font-weight: 550;
+   width: 40%;
+}

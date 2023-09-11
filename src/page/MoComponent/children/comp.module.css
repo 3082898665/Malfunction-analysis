@@ -1,0 +1,89 @@
+.all{
+/* height: 79vh; */
+text-align: left;
+margin-top: 10px;
+background-color: white;
+}
+.head{
+margin: 1rem;
+margin-top: -20px;
+margin-left:75% ;
+position: absolute;
+}
+.sel{
+    position: relative;
+    /* margin: 10px; */
+margin-left: 15px;
+top: -15px;
+display: flex;
+}
+.selchild{
+    height: 60px;
+    line-height: 120px;
+    margin-right: 30px;
+}
+.data{
+display: flex;
+margin-top: -25px;
+}
+.part{
+   
+    width: 20%;
+    margin-left: 9%;
+    text-align: center;
+}
+.myfont{
+    height: 30px;
+    line-height: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    /* margin-left: 39%; */
+    margin-bottom: 10px;
+}
+/* //247,247,249 */
+.pdetail{
+    height: 30px;
+    line-height: 30px;
+    background-color: rgb(247,247,249);
+    /* width: 220px; */
+  font-size: 10px;
+}
+.pdata{
+border-right: 1px solid rgba(0, 0, 0, 0.466);
+padding-right: 10px;
+}
+.maincontain{
+    margin: 1rem;
+    /* margin-top: -20px; */
+}
+.datahead{
+font-size: 17px;
+font-weight: 600;
+height: 50px;
+line-height: 50px;
+}
+.selsize{
+height: 20px;
+line-height: 20px;
+display: flex;
+}
+.selul{
+    margin-left: 20px;
+}
+.selsizec{
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+.change{
+    margin-left: 10px;
+    cursor: pointer;
+    color: rgb(82,119,255);
+
+}
+.smile{
+    color:rgba(163, 158, 158, 0.536)
+}
+.ech{
+    width: 100%;
+}

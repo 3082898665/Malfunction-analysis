@@ -1,0 +1,46 @@
+.all{
+    width: 98%;
+    margin-left:1%;
+    background-color: white;
+    /* height: 100px; */
+    margin-top:10px;
+}
+.step{
+    height: 100px;
+    margin-top:10px;
+    width: 70%;
+    margin-left:15%;
+    background-color: white;
+    padding: 10px;
+    border-radius:3%;
+}
+.diver{
+    width: 80%;
+    background-color: rgb(244, 237, 237);
+    height: 1px;
+    margin-left:10%
+}
+
+.stepchild{
+  /* border: 1px solid; */
+  width: 98%;
+  margin-left: 1%;
+  /* height: 420px; */
+}
+.anout{
+    height: 300px;
+  
+}
+.butfix{
+    position: fixed;
+    top: 93%;
+    background-color: white;
+    width: 90%;
+    margin-left:-1%;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.111);
+}
+.stepbut{
+margin-top:-30px;
+text-align: left;
+margin-left:2%;    
+}

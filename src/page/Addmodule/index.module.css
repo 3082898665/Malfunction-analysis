@@ -1,0 +1,118 @@
+.contain{
+    width: 98%;
+    margin-left: 1%;
+    background-color: white;
+    margin-top: 1%;
+    /* height: 60vh; */
+    display: flex;
+}
+.left{
+    width: 40%;
+    /* margin-top:-50px */
+    background-color: rgba(247, 247, 249, 0.282);
+}
+.right{
+    width: 60%;
+}
+/* ========================= */
+.tcontain{
+text-align: left;
+padding: 2rem;
+}
+.Ttitle{
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.tin{
+width: 100%;
+}
+.tmain{
+/* margin-top: -10%; */
+}
+.ttmain{
+    position: relative;
+    top: -13vh;
+}
+.tbo{
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+}
+.tname{
+    width: 40%;
+}
+.tbut{
+    width: 20%;
+    position: relative;
+    margin-top: 18%;
+}
+
+.tblock{
+    /* width: 10px; */
+    height: 100px;
+    margin-top: -50px;
+}
+.dcontain{
+    text-align: left;
+padding: 2rem;
+}
+
+.contit{
+    position: relative;
+    width: 15%;
+    font-size: 15px;
+    top:10%;
+    font-family: \"Microsoft YaHei\", \"微软雅黑\", STXihei, \"华文细黑\", Arial, Helvetica, sans-serif;
+    float: left;
+
+}
+.mainul{
+    position: relative;
+    top: 10px;
+}
+.conmain{
+margin-top:4.5%;
+width: 30%;
+position: relative;
+}
+.create{
+    margin-top:-4%;
+}
+.detail{
+    margin-left: -20%;
+    position: relative;
+}
+.maintr td{
+width: 10%;
+height: 23px;
+line-height: 23px;
+}
+.containtr td{
+    width: 1%;
+    height: 23px;
+    line-height: 23px;
+    }
+    .showcon{
+        /* border: 1px,solid,rgb(37, 35, 35); */
+        height: 200px;
+    }
+    .upload{
+        border: none;
+        background-color: white;
+        color: rgb(50, 83, 243);
+        position: absolute;
+        margin-left: 75%;
+        margin-top:-5%;
+    cursor: pointer;
+    }
+    .del{
+        position: absolute;
+        left: 80%;
+        color: rgb(50, 83, 243);
+        cursor: pointer;
+    }
+    .echpic{
+margin-bottom: -3%;
+    }

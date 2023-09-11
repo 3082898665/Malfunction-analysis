@@ -1,0 +1,68 @@
+import React from 'react'
+import {Select} from 'antd';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
+import { publish } from 'pubsub-js';
+import style from '../Mymodule.module.css'
+export default function Search({setTheme,setSele,arrnums}) {
+    const OPTIONS = ['Apples', 'Nails', 'Bananas', 'Helicopters'];
+    const [selectedItems, setSelectedItems] = useState([]);
+    const filteredOptions = OPTIONS.filter((o) => { 
+       return !selectedItems.includes(o)});
+       //改变状态
+    const handleChange = (value) => {
+      console.log(`selected ${value}`);
+      setTheme(value)
+    }
+    //改变数组值
+    function selechange(selectedItems){
+        // console.log(selectedItems)
+        setSele(selectedItems)
+        setSelectedItems(selectedItems)
+          }
+         
+  return (
+    <div className={style.but}>
+              <div className={style.selekuan}>
+    {/* <Select
+          defaultValue="状态选择"
+          style={{
+            width: 120,
+            
+          }}
+          onChange={handleChange}
+          options={[
+            {
+              value: 'success',
+              label: '已完成模型',
+            },
+            {
+              value: 'doing',
+              label: '所有模型',
+            },
+          ]}
+        /> */}
+        算法数量：2
+              </div>
+              <div className={style.kuan}>
+              {/* <Select
+          mode="multiple"
+          placeholder="搜索或选择数据集"
+          value={selectedItems}
+          onChange={selechange}
+          style={{
+            width: '250px',
+          }}
+          options={filteredOptions.map((item) => 
+            { 
+          
+              return{
+            value: item,
+            label: item
+          }})}
+        /> */}
+        总模型数量：{arrnums}
+              </div>
+              </div>
+  )
+}

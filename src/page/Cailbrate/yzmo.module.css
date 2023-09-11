@@ -1,0 +1,19 @@
+.showcon{
+    /* border: 1px,solid,rgb(37, 35, 35); */
+    height: 200px;
+}
+.upload{
+    border: none;
+    background-color: white;
+    color: rgb(50, 83, 243);
+    position: absolute;
+    margin-left: 75%;
+    margin-top:-5%;
+cursor: pointer;
+}
+.del{
+    position: absolute;
+    left: 80%;
+    color: rgb(50, 83, 243);
+    cursor: pointer;
+}

@@ -1,0 +1,70 @@
+.contain{
+    text-align: left;
+ 
+}
+.head{
+    width: 98%;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 1%;
+display: flex;
+padding-bottom: 40px;
+}
+.imghead{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-left: 20%;
+    margin-top: 1rem;
+}
+.detail{
+    margin-left: 10%;
+}
+.main{
+       margin-bottom: 20px;
+}
+.defont{
+    display: flex;
+    height: 40px;
+    line-height: 90px;
+}
+.done{
+    margin-left: 20%;
+}
+.but{
+    height: 40px;
+    line-height: 90px;
+}
+.hiscontain{
+width: 98%;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 1%;
+display: flex;
+}
+.title{
+    margin-top:-20px;
+    /* height: 20px; */
+    margin-left: 1rem;
+    font-size: 17px;
+
+}
+.tab{
+    margin-top: 2rem;
+    margin-left: 10rem;
+}
+.tt{
+    height: 40px;
+    line-height: 40px;
+}
+.tt td{
+    width: 200px;
+}
+.pacon{
+display: flex;
+width: 100%;
+margin: 1rem;
+}
+.passname{
+    width: 20%;
+}

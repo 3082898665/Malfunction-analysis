@@ -1,0 +1,58 @@
+.all{
+/* height: 79vh; */
+text-align: left;
+margin-top: 10px;
+background-color: white;
+}
+.sel{
+height: 50px;
+line-height: 50px;
+}
+.for{
+    width: 25px;
+    margin-left: 10px;
+    margin-top:-3px;
+}
+.selname{
+    font-size: 15px;
+    font-weight: 550;
+    margin: 1rem;
+}
+.title{
+    height: 30px;
+    line-height: 30px;
+    font-size: 17px;
+    margin-left: 1rem;
+    font-weight: 550;
+    margin-bottom: 10px;
+}
+.fdata{
+    display: flex;
+
+}
+.fdl{
+    width: 70% ;
+    margin-top: 4%;
+}
+.fdr{
+    width: 40%;
+    margin-left: 10%;
+    /* margin-top: -3%; */
+}
+.sdata{
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+}
+.sdl{
+    width: 70%;
+}
+.sdr{
+    width: 30%;
+}
+.picno{
+    position: absolute;
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 5%;
+}

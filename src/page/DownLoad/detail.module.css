@@ -1,0 +1,19 @@
+.detail{
+    margin-left: -20%;
+    position: relative;
+}
+.maintr td{
+width: 15%;
+height: 23px;
+line-height: 23px;
+}
+.containtr td{
+    width: 1%;
+    height: 23px;
+    line-height: 23px;
+    }
+    .maintain{
+        width: 900px;
+        position: relative;
+        /* left: 20%; */
+    }

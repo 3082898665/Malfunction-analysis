@@ -1,0 +1,104 @@
+.all{
+    background-color: white;
+    width: 98%;
+    margin-left: 1%;
+    margin-top:10px;
+    height: 500px;
+    display: flex;
+    font-family: "Microsoft YaHei", "黑体", SimHei, sans-serif;
+}
+.title{
+text-align: left;
+position: relative;
+top:20px;
+margin-left: 20px;
+font-size: 17px;
+height: 10px;
+line-height: 10px;
+width: 10%;
+}
+.contain{
+text-align: left;
+/* margin-left:20px; */
+width: 70%;
+margin-left: -8%;
+border-right: 1px solid rgb(240, 240, 240);
+}
+.contit{
+    height: 10px;
+}
+.show{
+    display: inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 12px;
+    margin-right: 6px;
+    background: #000;
+}
+.showdata{
+    /* height: 20px; */
+    /* line-height: 20px; */
+margin-top:25px;
+}
+.excel{
+    height: 20px;
+    line-height: 20px;
+    margin-top:-30px
+}
+.topcon{
+    font-size: 12px;
+    color: rgb(155, 153, 153);
+}
+.picimg{
+    width: 100%;
+    margin-top:10px;
+}
+.showcon{
+    /* border: 1px,solid,rgb(37, 35, 35); */
+    height: 200px;
+}
+.upload{
+    border: none;
+    background-color: white;
+    color: rgb(50, 83, 243);
+    position: absolute;
+    margin-left: 75%;
+    margin-top:-5%;
+cursor: pointer;
+}
+.in{
+    border: none;
+}
+.del{
+    position: absolute;
+    left: 80%;
+    color: rgb(50, 83, 243);
+    cursor: pointer;
+}
+.right{
+    margin-top: 30px;
+    margin-left: 5%;
+    height: 100px;
+    width: 30%;
+}
+.rtit{
+    position: relative;
+    top:-7vh;
+    font-size: 18px;
+    left: -50%;
+    margin-bottom: 10px;
+}
+.mainr{
+    width: 500px
+}
+.textcon{
+    font-family: "Microsoft YaHei", "黑体", SimHei, sans-serif;
+}
+.butsub{
+    margin: 5%;
+}
+.worddetail{
+    height: 50px;
+    margin-left: -35px;
+    margin-top: -60px;
+}
