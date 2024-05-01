@@ -67,7 +67,7 @@ export default function MyCailbrate() {
   const [yzloading, setyzload] = useState(false)
   const handleChange = (value) => {
     localStorage.setItem('maintype', localStorage.getItem(value))
-    localStorage.setItem('nigw',value)
+    localStorage.setItem('nigw', value)
     getwjinfo(value).then(res => {
       const data = res.data.data;
       let logg = []
@@ -86,7 +86,7 @@ export default function MyCailbrate() {
   };
   const [yzmodule, setyz] = useState()
   const handleChangetow = (value) => {
-    localStorage.setItem('nigm',value)
+    localStorage.setItem('nigm', value)
     setshowtow(true)
     setload(true)
     setyz(value)
@@ -98,15 +98,17 @@ export default function MyCailbrate() {
       const data = res.data.data
       setrealdata(data)
       console.log(data)
-      const hisarr={modelId:localStorage.getItem(`nigm`),fileId:localStorage.getItem('nigw'),type:'查看模型'}
+      const hisarr = { modelId: localStorage.getItem(`nigm`), fileId: localStorage.getItem('nigw'), type: '查看模型' }
       console.log(hisarr)
-      axios.post('http://192.168.143.188:10010/history/save',hisarr,{headers: {
-       'Content-Type': 'application/json', 
-       'Token': localStorage.getItem('token'),
-     }}).then(res=>{
-       console.log(res.data)
-     
-     })
+      axios.post('http://192.168.182.188:10010/history/save', hisarr, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Token': localStorage.getItem('token'),
+        }
+      }).then(res => {
+        console.log(res.data)
+
+      })
     })
   };
 

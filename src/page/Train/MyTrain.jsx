@@ -1,31 +1,31 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Steps,message, Modal, notification } from 'antd';
+import { Button, Steps, message, Modal, notification } from 'antd';
 import { publish } from 'pubsub-js';
 import { AwesomeButton, AwesomeButtonProgress } from "react-awesome-button";
 import style from './train.module.css'
 import { Outlet, useNavigate, useLocation } from 'react-router-dom'
 import { subscribe } from 'pubsub-js'
-import { createwjj, runxl, heightxl,sethis } from '../../request/api'
+import { createwjj, runxl, heightxl, sethis } from '../../request/api'
 import axios from 'axios';
 export default function MyTrain() {
 
     const [messageApi, contextHoldere] = message.useMessage();
     const loading = () => {
-      messageApi.open({
-        type: 'loading',
-        content: '请等待模型训练完毕',
-        duration: 0,
-      });
-      // Dismiss manually and asynchronously
-      setTimeout(messageApi.destroy, 3000);
+        messageApi.open({
+            type: 'loading',
+            content: '请等待模型训练完毕',
+            duration: 0,
+        });
+        // Dismiss manually and asynchronously
+        setTimeout(messageApi.destroy, 3000);
     };
 
     const success = () => {
         messageApi.open({
-          type: 'success',
-          content: '模型训练完成',
+            type: 'success',
+            content: '模型训练完成',
         });
-      };
+    };
     const { state } = useLocation();
     const navigate = useNavigate()
     //对话框
@@ -292,35 +292,37 @@ export default function MyTrain() {
                                     // await for something then call
                                     // 
                                     loading()
-                                    for(let i=0;i<Number(localStorage.getItem('xllength'));i++){
-                                        let datanew =[]
-                                        if(localStorage.getItem('xlver')==1){
-                                           datanew= [localStorage.getItem(`selelist${i}`),500,1]
-                                        }else{
-                                            datanew= [localStorage.getItem(`selelist${i}`),Number( localStorage.getItem('bb')),0]
+                                    for (let i = 0; i < Number(localStorage.getItem('xllength')); i++) {
+                                        let datanew = []
+                                        if (localStorage.getItem('xlver') == 1) {
+                                            datanew = [localStorage.getItem(`selelist${i}`), 500, 1]
+                                        } else {
+                                            datanew = [localStorage.getItem(`selelist${i}`), Number(localStorage.getItem('bb')), 0]
                                         }
-                               
-                                       await heightxl(datanew).then(res => {
+
+                                        await heightxl(datanew).then(res => {
 
                                             next();
                                             console.log(res.data)
                                             const ju = true
-                                           const hisarr={modelId:localStorage.getItem(`selelist${i}`),fileId:localStorage.getItem('hiswj'),type:'训练模型'}
-                                           console.log(hisarr)
-                                           axios.post('http://192.168.143.188:10010/history/save',hisarr,{headers: {
-                                            'Content-Type': 'application/json', 
-                                            'Token': localStorage.getItem('token'),
-                                          }}).then(res=>{
-                                            console.log(res.data)
-                                          
-                                          })
-                                          console.log(res.data);
-                                      
-                                            navigate('/contain/train/stepthird', { state: { ju, data:[11,11,11] } })
+                                            const hisarr = { modelId: localStorage.getItem(`selelist${i}`), fileId: localStorage.getItem('hiswj'), type: '训练模型' }
+                                            console.log(hisarr)
+                                            axios.post('http://192.168.182.188:10010/history/save', hisarr, {
+                                                headers: {
+                                                    'Content-Type': 'application/json',
+                                                    'Token': localStorage.getItem('token'),
+                                                }
+                                            }).then(res => {
+                                                console.log(res.data)
+
+                                            })
+                                            console.log(res.data);
+
+                                            navigate('/contain/train/stepthird', { state: { ju, data: [11, 11, 11] } })
                                         })
-                                    }  
-        success()
-                                    
+                                    }
+                                    success()
+
 
 
 

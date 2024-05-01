@@ -30,18 +30,18 @@ export default function ChatPage() {
                 return [...old, { ma: null, user: userword }]
             })
 
-            axios.get('http://192.168.143.188:10010/user/talk?words='+userword)
-            .then(res => {
-               console.log(res.data)
-                
+            axios.get('http://192.168.182.188:10010/user/talk?words=' + userword)
+                .then(res => {
+                    console.log(res.data)
+
                     setlist(old => {
                         const oldarr = old.filter(item => item.ma != null)
                         console.log(oldarr)
                         return [...oldarr, { ma: res.data, user: userword }]
                     })
-               
-                setuserword('')
-            })
+
+                    setuserword('')
+                })
             k++
         }
     }

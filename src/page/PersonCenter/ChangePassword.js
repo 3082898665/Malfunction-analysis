@@ -1,13 +1,13 @@
 import { ExclamationCircleOutlined } from '@ant-design/icons';
-import { Button, Modal, Space,Input,message, } from 'antd';
+import { Button, Modal, Space, Input, message, } from 'antd';
 import React, { useState } from 'react';
 import style from './index.module.css'
-import axios from 'axios';
+
 
 const LocalizedModal = () => {
 
-    const [messageApi, contextHolder] = message.useMessage();
-const success = () => {
+  const [messageApi, contextHolder] = message.useMessage();
+  const success = () => {
     messageApi.open({
       type: 'success',
       content: 'This is a success message',
@@ -20,7 +20,7 @@ const success = () => {
     });
   };
   const [open, setOpen] = useState(false);
- 
+
   const showModal = () => {
     setOpen(true);
   };
@@ -29,25 +29,25 @@ const success = () => {
   };
 
   const ischange = () => {
-    console.log(pass,newpass)
-    if(pass!==newpass){
-        error()
-    }else{
-        messageApi.open({
-            type: 'success',
-            content: 'This is a success message',
-          });
-          setnewpass(null)
-          setpass(null)
-        setOpen(false);
+    console.log(pass, newpass)
+    if (pass !== newpass) {
+      error()
+    } else {
+      messageApi.open({
+        type: 'success',
+        content: 'This is a success message',
+      });
+      setnewpass(null)
+      setpass(null)
+      setOpen(false);
     }
   };
-  const [pass,setpass]=useState()
-  const [newpass,setnewpass]=useState( )
-  function setopass(e){
-  setpass(e.target.value)
+  const [pass, setpass] = useState()
+  const [newpass, setnewpass] = useState()
+  function setopass(e) {
+    setpass(e.target.value)
   }
-  function setnpass(e){
+  function setnpass(e) {
     setnewpass(e.target.value)
   }
 
@@ -55,8 +55,8 @@ const success = () => {
 
   return (
     <>
-   {contextHolder}
-      <Button  onClick={showModal} type="primary" >
+      {contextHolder}
+      <Button onClick={showModal} type="primary" >
         密码修改
       </Button>
       <Modal
@@ -68,20 +68,20 @@ const success = () => {
         cancelText="取消"
       >
         <div className={style.pacon}>
-         <div className={style.passname}>
+          <div className={style.passname}>
             旧密码
-         </div>
-         <div className={style.passin}>
-         <Input placeholder="旧密码"  value={pass} onChange={setopass} type='password'/>
-         </div>
+          </div>
+          <div className={style.passin}>
+            <Input placeholder="旧密码" value={pass} onChange={setopass} type='password' />
+          </div>
         </div>
         <div className={style.pacon}>
-         <div className={style.passname}>
+          <div className={style.passname}>
             新密码
-         </div>
-         <div className={style.passin}>
-         <Input placeholder="新密码" value={newpass} onChange={setnpass}  type='password'/>
-         </div>
+          </div>
+          <div className={style.passin}>
+            <Input placeholder="新密码" value={newpass} onChange={setnpass} type='password' />
+          </div>
         </div>
       </Modal>
     </>
@@ -100,7 +100,7 @@ const DeTailwinder = () => {
   };
   return (
     <>
-  
+
       <Space>
         <LocalizedModal />
 

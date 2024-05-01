@@ -1,12 +1,12 @@
 import React, { useState, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import style from './index.module.css'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { AwesomeButton } from "react-awesome-button";
 import { FormOutlined, ToTopOutlined, FileExcelOutlined } from '@ant-design/icons';
-import { Button, Modal, Radio, Collapse,message } from 'antd';
+import { Button, Modal, Radio, Collapse, message } from 'antd';
 import load from '../../assets/pic/load.png'
-import {addmodule } from '../../request/api'
+import { addmodule } from '../../request/api'
 import axios from 'axios';
 const { Panel } = Collapse;
 const text = `
@@ -114,30 +114,30 @@ export default function Myleading() {
       console.log(formData.get('file'))
     }
     const peo = { file: files[0] }
-    axios.post('http://192.168.143.188:10010/result/upload', formData,{
-      headers:{
-      'Content-Type': 'multipart/form-data',
-      'Token':localStorage.getItem('token')
-    }
+    axios.post('http://192.168.182.188:10010/result/upload', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        'Token': localStorage.getItem('token')
+      }
     }).then(res => {
       console.log(res.data)
-      const id=state.id
-    addmodule(id).then(res=>{
-success();
-setTimeout(() => {
-  window.history.back();
-}, 1000);
+      const id = state.id
+      addmodule(id).then(res => {
+        success();
+        setTimeout(() => {
+          window.history.back();
+        }, 1000);
+
+      })
+
 
     })
 
-
-    })
-  
-      console.log(formData.get('file'))
+    console.log(formData.get('file'))
   }
   return (
     <div className={style.all}>
-        {contextHolder}
+      {contextHolder}
       <div className={style.title}>
         数据导入
       </div>
@@ -220,7 +220,7 @@ setTimeout(() => {
                 </div>
                 <div className={style.showcon} style={{ display: show === true ? '' : 'none' }} key='2' onClick={onshow}>
                   文件
-                 
+
                   <div>
                     <input
                       type="file"
@@ -250,12 +250,12 @@ setTimeout(() => {
         </div>
         <div className={style.butsub}>
           <div className={style.worddetail}>
-      {selectedFile.length!=0?
-       <>
-         已选择文件：{selectedFile[0].name}
-       </>:<>没有选择任何文件</>
-      }
-      </div>
+            {selectedFile.length != 0 ?
+              <>
+                已选择文件：{selectedFile[0].name}
+              </> : <>没有选择任何文件</>
+            }
+          </div>
           <AwesomeButton type="primary" onPress={sub}> 确定并上传</AwesomeButton>
         </div>
       </div>

@@ -1,16 +1,16 @@
 import { ExclamationCircleOutlined, FileExcelOutlined } from '@ant-design/icons';
-import { Button, Modal, Space, message,Select } from 'antd';
+import { Button, Modal, Space, message, Select } from 'antd';
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import style from '../yzmo.module.css'
-import {heightyz} from '../../../request/api'
-const LocalizedModal = ({ setyzopen,show,ids,setyz,setyzload}) => {
+import { heightyz } from '../../../request/api'
+const LocalizedModal = ({ setyzopen, show, ids, setyz, setyzload }) => {
   const [messageApi, contextHolder] = message.useMessage()
   const [open, setOpen] = useState(false);
   const showModal = () => {
-    if(show){
-    setOpen(true);
-    }else{
+    if (show) {
+      setOpen(true);
+    } else {
       warning()
     }
   };
@@ -57,7 +57,7 @@ const LocalizedModal = ({ setyzopen,show,ids,setyz,setyzload}) => {
   };
 
   const formData = new FormData();
- 
+
   const sub = () => {
     setyzload(true)
     setOpen(false);
@@ -72,40 +72,42 @@ const LocalizedModal = ({ setyzopen,show,ids,setyz,setyzload}) => {
       console.log(formData.get('file'))
     }
     const peo = { file: files[0] }
-    axios.post('http://192.168.143.188:10010/result/upload', formData,{
-      headers:{
-      'Content-Type': 'multipart/form-data',
-      'Token':localStorage.getItem('token')
-    }
+    axios.post('http://192.168.182.188:10010/result/upload', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        'Token': localStorage.getItem('token')
+      }
     }).then(res => {
       console.log(res.data)
-      heightyz([ids,localStorage.getItem('maintype')]).then(resd=>{
-        const data=resd.data.data.results
+      heightyz([ids, localStorage.getItem('maintype')]).then(resd => {
+        const data = resd.data.data.results
         console.log(resd.data.data.results)
-        for(let i=0;i<7;i++){
-          setyz(old=>{
-            return [...old,data[i]]
+        for (let i = 0; i < 7; i++) {
+          setyz(old => {
+            return [...old, data[i]]
           })
         }
         success();
-        
-        const hisarr={modelId:localStorage.getItem(`nigm`),fileId:localStorage.getItem('nigw'),type:'验证模型'}
+
+        const hisarr = { modelId: localStorage.getItem(`nigm`), fileId: localStorage.getItem('nigw'), type: '验证模型' }
         console.log(hisarr)
-        axios.post('http://192.168.143.188:10010/history/save',hisarr,{headers: {
-         'Content-Type': 'application/json', 
-         'Token': localStorage.getItem('token'),
-       }}).then(res=>{
-         console.log(res.data)
-       
-       })
+        axios.post('http://192.168.182.188:10010/history/save', hisarr, {
+          headers: {
+            'Content-Type': 'application/json',
+            'Token': localStorage.getItem('token'),
+          }
+        }).then(res => {
+          console.log(res.data)
+
+        })
 
 
         setyzload(false)
       })
 
     })
-  
-      console.log(formData.get('file'))
+
+    console.log(formData.get('file'))
   }
 
   return (
@@ -164,7 +166,7 @@ const LocalizedModal = ({ setyzopen,show,ids,setyz,setyzload}) => {
     </>
   );
 };
-const Yzwinder = ({ setyzopens,openshow,myid,setyzdm,setyzloading }) => {
+const Yzwinder = ({ setyzopens, openshow, myid, setyzdm, setyzloading }) => {
   const [modal1, contextHolder] = Modal.useModal();
   const confirm = () => {
     modal1.confirm({
@@ -177,9 +179,9 @@ const Yzwinder = ({ setyzopens,openshow,myid,setyzdm,setyzloading }) => {
   };
   return (
     <>
-        
+
       <Space>
-        <LocalizedModal setyzopen={setyzopens} show={openshow} ids={myid} setyz={setyzdm} setyzload={setyzloading}/>
+        <LocalizedModal setyzopen={setyzopens} show={openshow} ids={myid} setyz={setyzdm} setyzload={setyzloading} />
 
       </Space>
       {contextHolder}

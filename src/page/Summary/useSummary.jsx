@@ -21,16 +21,20 @@ export default function useSummary() {
     getModelCount().then(res => {
       console.log(res.data.data)
       let data = res.data.data;
+      console.log(res)
+      debugger;
       setall(data.start)
       setfin(data.end)
     })
-    axios.get('http://192.168.143.188:10010/result/getModelDone',{headers: {
-      'Token': localStorage.getItem('token'),
-    }}).then(res=>{
+    axios.get('https://poetic-full-tahr.ngrok-free.app/result/getModelDone', {
+      headers: {
+        'Token': localStorage.getItem('token'),
+      }
+    }).then(res => {
       console.log(res.data.data)
-    setdown(res.data.data)
+      setdown(res.data.data)
     })
-    getCount().then(res=>{
+    getCount().then(res => {
       console.log(res.data.data)
       setdo(res.data.data)
     })
@@ -39,7 +43,7 @@ export default function useSummary() {
   const [all, setall] = useState()
   const [fin, setfin] = useState()
   const [down, setdown] = useState()
-  const [done,setdo]=useState()
+  const [done, setdo] = useState()
   const success = () => {
     messageApi.open({
       type: 'success',

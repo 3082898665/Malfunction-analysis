@@ -13,22 +13,22 @@ export const basciUrl = isPrd ? 'https://www.production.com' : 'http://www.devel
 
 //设置axios基础路径
 const service = axios.create({
-  baseURL: 'http://192.168.143.188:10010'
+  baseURL: 'https://poetic-full-tahr.ngrok-free.app'
 })
 
 // 请求拦截器
-service.interceptors.request.use(config => { 
+service.interceptors.request.use(config => {
 
-if(localStorage.getItem('token'))
-  config.headers = {
-    'Token': localStorage.getItem('token'),
-    // 'Content-Type':'multipart/form-data'
-  }
+  if (localStorage.getItem('token'))
+    config.headers = {
+      'Token': localStorage.getItem('token'),
+      // 'Content-Type':'multipart/form-data'
+    }
   //序列化请求参数，不然post请求参数后台接收不正常
   config.data = QS.stringify(config.data)
   return config
-}, error => { 
-    return error;
+}, error => {
+  return error;
 })
 
 // 响应拦截器
@@ -48,7 +48,7 @@ service.interceptors.response.use(response => {
       default:
         message.error(response.data.msg)
     }
-  } else { 
+  } else {
     return response;
   }
 })
